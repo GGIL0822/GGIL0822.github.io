@@ -24,7 +24,7 @@
       flex-direction: column;
     }
 
-    /* ☰ 버튼 */
+    /* ☰ 메뉴 버튼 */
     .menu-btn {
       position: fixed;
       top: 20px;
@@ -32,9 +32,10 @@
       font-size: 28px;
       cursor: pointer;
       z-index: 1001;
+      user-select: none;
     }
 
-    /* 메뉴 */
+    /* 슬라이드 메뉴 */
     .menu {
       position: fixed;
       top: 0;
@@ -60,35 +61,54 @@
       border-bottom: 1px solid #222;
     }
 
+    /* 메인 */
     main {
-      padding: 100px 20px 40px;
+      padding: 100px 16px 40px;
       flex: 1;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    /* 게임 리스트 */
+    .game-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
     }
 
     .game-card {
       background: #1b2b34;
       border-radius: 14px;
-      padding: 20px;
-      margin-bottom: 20px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
     }
 
-.unwatermarked_Gemini_Generated_Image_henrphhenrphhenr (1).png {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 12px;
-  display: block;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-}
-    
+    .game-thumb {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 12px;
+    }
+
     .game-card h3 {
-      margin-top: 0;
+      margin: 0 0 6px;
+      font-size: 18px;
+    }
+
+    .game-card p {
+      font-size: 14px;
+      opacity: 0.8;
+      flex: 1;
     }
 
     .play-btn {
-      display: inline-block;
       margin-top: 12px;
-      padding: 10px 18px;
+      padding: 10px;
+      text-align: center;
       background: #00c6ff;
       color: #000;
       border-radius: 8px;
@@ -111,8 +131,10 @@
 
 <body>
 
+  <!-- ☰ 버튼 -->
   <div class="menu-btn" onclick="toggleMenu()">☰</div>
 
+  <!-- 메뉴 -->
   <nav class="menu" id="menu">
     <a href="index.html">🏠 홈</a>
     <a href="games.html">🎮 게임 보기</a>
@@ -123,16 +145,25 @@
     <main>
       <h1>🎮 게임 보기</h1>
 
-      <div class="game-card">
-        <h3>게임 제목 1</h3>
-        <p>간단한 게임 설명</p>
-        <a class="play-btn" href="game1/index.html">▶ 게임 플레이</a>
-      </div>
+      <div class="game-list">
 
-      <div class="game-card">
-        <h3>게임 제목 2</h3>
-        <p>준비 중</p>
-        <a class="play-btn" href="#">▶ 준비 중</a>
+        <!-- 게임 카드 1 -->
+        <div class="game-card">
+          <img
+            src="images/unwatermarked_Gemini_Generated_Image_henrphhenrphhenr (1).png"
+            class="game-thumb"
+            alt="게임 썸네일">
+
+          <h3>게임 제목 1</h3>
+          <p>간단한 게임 설명</p>
+
+          <a class="play-btn" href="game1/index.html">
+            ▶ 게임 플레이
+          </a>
+        </div>
+
+        <!-- 👆 이 블록 복붙해서 게임 계속 추가하면 됨 -->
+
       </div>
     </main>
 
