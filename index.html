@@ -11,18 +11,61 @@
       font-family: Arial, sans-serif;
       background: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
       color: white;
+      overflow-x: hidden;
     }
 
     .wrapper {
-      min-height: 100svh; /* 모바일 주소창 문제 해결 */
+      min-height: 100svh;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       text-align: center;
     }
 
+    /* ☰ 버튼 */
+    .menu-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      font-size: 28px;
+      cursor: pointer;
+      z-index: 1001;
+      user-select: none;
+    }
+
+    /* 메뉴 배경 */
+    .menu {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 70%;
+      max-width: 260px;
+      height: 100%;
+      background: #111;
+      padding-top: 80px;
+      transition: left 0.3s ease;
+      z-index: 1000;
+    }
+
+    .menu a {
+      display: block;
+      padding: 16px 24px;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      border-bottom: 1px solid #222;
+    }
+
+    .menu a:hover {
+      background: #222;
+    }
+
+    .menu.open {
+      left: 0;
+    }
+
     header {
-      padding: 80px 20px 40px;
+      padding: 100px 20px 40px;
     }
 
     header h1 {
@@ -36,28 +79,6 @@
       opacity: 0.85;
     }
 
-    .buttons {
-      margin-top: 40px;
-    }
-
-    .buttons a {
-      display: inline-block;
-      margin: 10px;
-      padding: 15px 36px;
-      border-radius: 999px;
-      background: #4fc3f7;
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
-      transition: transform 0.2s, background 0.2s;
-    }
-
-    .buttons a:hover {
-      background: #81d4fa;
-      transform: scale(1.05);
-    }
-
     footer {
       padding: 20px;
       font-size: 14px;
@@ -67,22 +88,32 @@
 </head>
 
 <body>
-  <div class="wrapper">
 
+  <!-- ☰ 버튼 -->
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+  <!-- 슬라이드 메뉴 -->
+  <nav class="menu" id="menu">
+    <a href="#">🎮 게임 보기</a>
+    <a href="#">👤 개발자 소개</a>
+  </nav>
+
+  <div class="wrapper">
     <header>
       <h1>🎮 GGIL GAMES</h1>
       <p>Indie Game Developer</p>
-
-      <div class="buttons">
-        <a href="#">게임 보기</a>
-        <a href="#">개발자 소개</a>
-      </div>
     </header>
 
     <footer>
       © 2026 GGIL GAMES
     </footer>
-
   </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("open");
+    }
+  </script>
+
 </body>
 </html>
