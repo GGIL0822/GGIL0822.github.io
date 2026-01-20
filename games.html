@@ -2,178 +2,38 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>게임 보기 - GGIL GAMES</title>
+  <title>게임 보기 | GGIL GAMES</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    html, body {
-      height: 100%;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f2027;
-      color: white;
-      overflow-x: hidden;
-    }
-
-    .wrapper {
-      min-height: 100svh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* ☰ 메뉴 버튼 */
-    .menu-btn {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      font-size: 28px;
-      cursor: pointer;
-      z-index: 1001;
-      user-select: none;
-    }
-
-    /* 슬라이드 메뉴 */
-    .menu {
-      position: fixed;
-      top: 0;
-      left: -100%;
-      width: 70%;
-      max-width: 260px;
-      height: 100%;
-      background: #111;
-      padding-top: 80px;
-      transition: left 0.3s ease;
-      z-index: 1000;
-    }
-
-    .menu.open {
-      left: 0;
-    }
-
-    .menu a {
-      display: block;
-      padding: 16px 24px;
-      color: white;
-      text-decoration: none;
-      border-bottom: 1px solid #222;
-    }
-
-    /* 메인 */
-    main {
-      padding: 100px 16px 40px;
-      flex: 1;
-    }
-
-    h1 {
-      margin-bottom: 20px;
-    }
-
-    /* 게임 리스트 */
-    .game-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 16px;
-    }
-
-    .game-card {
-      background: #1b2b34;
-      border-radius: 14px;
-      padding: 16px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .game-thumb {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      object-fit: cover;
-      border-radius: 10px;
-      margin-bottom: 12px;
-    }
-
-    .game-card h3 {
-      margin: 0 0 6px;
-      font-size: 18px;
-    }
-
-    .game-card p {
-      font-size: 14px;
-      opacity: 0.8;
-      flex: 1;
-    }
-
-    .play-btn {
-      margin-top: 12px;
-      padding: 10px;
-      text-align: center;
-      background: #00c6ff;
-      color: #000;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .play-btn:hover {
-      background: #00a8dd;
-    }
-
-    footer {
-      text-align: center;
-      padding: 16px;
-      font-size: 14px;
-      opacity: 0.6;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <!-- ☰ 버튼 -->
-  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+<!-- 상단바 -->
+<header class="topbar">
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  <h1>게임 보기</h1>
+</header>
 
-  <!-- 메뉴 -->
-  <nav class="menu" id="menu">
-    <a href="index.html">🏠 홈</a>
-    <a href="games.html">🎮 게임 보기</a>
-    <a href="notice.html">📢 공지</a>
-  </nav>
+<!-- 슬라이드 메뉴 -->
+<nav class="menu" id="menu">
+  <a href="index.html">🏠 홈</a>
+  <a href="games.html">🎮 게임 보기</a>
+  <a href="#">📢 공지</a>
+</nav>
 
-  <div class="wrapper">
-    <main>
-      <h1>🎮 게임 보기</h1>
+<!-- 메인 -->
+<main class="container">
 
-      <div class="game-list">
-
-        <!-- 게임 카드 1 -->
-        <div class="game-card">
-          <img src="/images/unwatermarked_Gemini_Generated_Image_henrphhenrphhenr (1).png"
-     class="game-thumb"
-     alt="게임 썸네일">
-
-          <h3>게임 제목 1</h3>
-          <p>간단한 게임 설명</p>
-
-          <a class="play-btn" href="game1/index.html">
-            ▶ 게임 플레이
-          </a>
-        </div>
-
-        <!-- 👆 이 블록 복붙해서 게임 계속 추가하면 됨 -->
-
-      </div>
-    </main>
-
-    <footer>© 2026 GGIL GAMES</footer>
+  <!-- 게임 카드 1 -->
+  <div class="game-card">
+    <img src="/images/unwatermarked_Gemini_Generated_Image_henrphhenrphhenr (1).png"
+         alt="게임 썸네일">
+    <h2>내 게임</h2>
+    <a class="play-btn" href="#">▶ 게임 플레이</a>
   </div>
 
-  <script>
-    function toggleMenu() {
-      document.getElementById("menu").classList.toggle("open");
-    }
-  </script>
+</main>
 
+<script src="script.js"></script>
 </body>
 </html>
