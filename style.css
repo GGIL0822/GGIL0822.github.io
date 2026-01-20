@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  background: #0f2027;
+  color: white;
+}
+
+/* 상단바 */
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  background: #0b1a20;
+}
+
+.menu-btn {
+  font-size: 22px;
+  background: none;
+  border: 1px solid #555;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+/* 메뉴 */
+.menu {
+  display: none;
+  flex-direction: column;
+  background: #12242c;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 12px;
+  border-bottom: 1px solid #1f3a45;
+}
+
+.menu.show {
+  display: flex;
+}
+
+/* 메인 */
+.container {
+  padding: 16px;
+}
+
+/* 게임 카드 */
+.game-card {
+  background: #162d36;
+  border-radius: 16px;
+  padding: 16px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.game-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.play-btn {
+  display: block;
+  margin-top: 12px;
+  background: #00c3ff;
+  color: black;
+  text-align: center;
+  padding: 14px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+}
