@@ -67,9 +67,28 @@
 
     .game-card {
       background: #1b2b34;
-      border-radius: 12px;
+      border-radius: 14px;
       padding: 20px;
       margin-bottom: 20px;
+    }
+
+    .game-card h3 {
+      margin-top: 0;
+    }
+
+    .play-btn {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 10px 18px;
+      background: #00c6ff;
+      color: #000;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .play-btn:hover {
+      background: #00a8dd;
     }
 
     footer {
@@ -98,11 +117,13 @@
       <div class="game-card">
         <h3>게임 제목 1</h3>
         <p>간단한 게임 설명</p>
+        <a class="play-btn" href="game1/index.html">▶ 게임 플레이</a>
       </div>
 
       <div class="game-card">
         <h3>게임 제목 2</h3>
-        <p>추가 예정</p>
+        <p>준비 중</p>
+        <a class="play-btn" href="#">▶ 준비 중</a>
       </div>
     </main>
 
