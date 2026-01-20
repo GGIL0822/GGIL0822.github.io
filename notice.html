@@ -2,94 +2,111 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>공지 | GGIL GAMES</title>
+  <title>공지 - GGIL GAMES</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+    html, body {
+      height: 100%;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
+      background: #203a43;
       color: white;
+      overflow-x: hidden;
     }
 
-    header {
-      padding: 60px 20px 30px;
-      text-align: center;
+    .wrapper {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 36px;
+    .menu-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      font-size: 28px;
+      cursor: pointer;
+      z-index: 1001;
     }
 
-    .notice-list {
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 20px;
+    .menu {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 70%;
+      max-width: 260px;
+      height: 100%;
+      background: #111;
+      padding-top: 80px;
+      transition: left 0.3s ease;
+      z-index: 1000;
+    }
+
+    .menu.open {
+      left: 0;
+    }
+
+    .menu a {
+      display: block;
+      padding: 16px 24px;
+      color: white;
+      text-decoration: none;
+      border-bottom: 1px solid #222;
+    }
+
+    main {
+      padding: 100px 20px 40px;
+      flex: 1;
     }
 
     .notice {
-      background: rgba(0,0,0,0.3);
+      background: #1b2b34;
       border-radius: 12px;
       padding: 20px;
       margin-bottom: 16px;
     }
 
-    .notice h2 {
-      margin: 0 0 8px;
-      font-size: 20px;
-    }
-
-    .notice .date {
+    footer {
+      text-align: center;
+      padding: 16px;
       font-size: 14px;
       opacity: 0.6;
-      margin-bottom: 10px;
-    }
-
-    .notice p {
-      margin: 0;
-      line-height: 1.6;
-    }
-
-    .back {
-      display: block;
-      text-align: center;
-      margin: 30px 0 50px;
-      color: #4fc3f7;
-      text-decoration: none;
-      font-weight: bold;
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>📢 공지사항</h1>
-  </header>
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
 
-  <div class="notice-list">
+  <nav class="menu" id="menu">
+    <a href="index.html">🏠 홈</a>
+    <a href="games.html">🎮 게임 보기</a>
+    <a href="notice.html">📢 공지</a>
+  </nav>
 
-    <div class="notice">
-      <h2>GGS</h2>
-      <div class="date">2026-01-20</div>
-      <p>
-        테스트 <br>
-      </p>
-    </div>
+  <div class="wrapper">
+    <main>
+      <h1>📢 공지</h1>
 
-    <div class="notice">
-      <h2>테스트</h2>
-      <div class="date">2026-01-18</div>
-      <p>
-        테스트 <br>
-      </p>
-    </div>
+      <div class="notice">
+        <h3>사이트 오픈</h3>
+        <p>GGIL GAMES 공식 사이트를 오픈했습니다!</p>
+      </div>
+    </main>
 
+    <footer>© 2026 GGIL GAMES</footer>
   </div>
 
-  <a class="back" href="index.html">← 메인으로 돌아가기</a>
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("open");
+    }
+  </script>
 
 </body>
 </html>
