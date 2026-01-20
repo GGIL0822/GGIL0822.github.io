@@ -2,10 +2,14 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>GGS</title>
+  <title>GGIL GAMES</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+    html, body {
+      height: 100%; /* ⭐ 중요 */
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -14,13 +18,8 @@
       overflow-x: hidden;
     }
 
-<nav class="menu" id="menu">
-  <a href="games.html">🎮 게임 보기</a>
-  <a href="notice.html">📢 공지</a>
-</nav>
-    
     .wrapper {
-      min-height: 100svh;
+      min-height: 100svh; /* 모바일 안전 높이 */
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -99,8 +98,8 @@
 
   <!-- 메뉴 -->
   <nav class="menu" id="menu">
-    <a href="#">🎮 게임 보기</a>
-    <a href="#">📢 공지</a>
+    <a href="games.html">🎮 게임 보기</a>
+    <a href="notice.html">📢 공지</a>
   </nav>
 
   <div class="wrapper">
@@ -122,5 +121,3 @@
 
 </body>
 </html>
-
-<a href="notice.html">📢 공지</a>
