@@ -11,21 +11,29 @@
       font-family: Arial, sans-serif;
       background: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
       color: white;
+    }
+
+    .wrapper {
+      min-height: 100svh; /* 모바일 주소창 문제 해결 */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       text-align: center;
     }
 
     header {
-      padding: 80px 20px;
+      padding: 80px 20px 40px;
     }
 
     header h1 {
       font-size: 48px;
       margin-bottom: 10px;
+      letter-spacing: 2px;
     }
 
     header p {
       font-size: 18px;
-      opacity: 0.8;
+      opacity: 0.85;
     }
 
     .buttons {
@@ -35,13 +43,14 @@
     .buttons a {
       display: inline-block;
       margin: 10px;
-      padding: 15px 30px;
-      border-radius: 30px;
+      padding: 15px 36px;
+      border-radius: 999px;
       background: #4fc3f7;
       color: #000;
       text-decoration: none;
       font-weight: bold;
-      transition: 0.2s;
+      font-size: 16px;
+      transition: transform 0.2s, background 0.2s;
     }
 
     .buttons a:hover {
@@ -50,28 +59,30 @@
     }
 
     footer {
-      margin-top: 80px;
       padding: 20px;
       font-size: 14px;
       opacity: 0.6;
     }
   </style>
 </head>
+
 <body>
+  <div class="wrapper">
 
-  <header>
-    <h1>🎮 GGIL GAMES</h1>
-    <p>Indie Game Developer</p>
+    <header>
+      <h1>🎮 GGIL GAMES</h1>
+      <p>Indie Game Developer</p>
 
-    <div class="buttons">
-      <a href="#">게임 보기</a>
-      <a href="#">개발자 소개</a>
-    </div>
-  </header>
+      <div class="buttons">
+        <a href="#">게임 보기</a>
+        <a href="#">개발자 소개</a>
+      </div>
+    </header>
 
-  <footer>
-    © 2026 GGIL GAMES
-  </footer>
+    <footer>
+      © 2026 GGIL GAMES
+    </footer>
 
+  </div>
 </body>
 </html>
