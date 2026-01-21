@@ -3,121 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <title>GGIL GAMES</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    html, body {
-      height: 100%; /* ⭐ 중요 */
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
-      color: white;
-      overflow-x: hidden;
-    }
-
-    .wrapper {
-      min-height: 100svh; /* 모바일 안전 높이 */
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      text-align: center;
-    }
-
-    /* ☰ 메뉴 버튼 */
-    .menu-btn {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      font-size: 28px;
-      cursor: pointer;
-      z-index: 1001;
-      user-select: none;
-    }
-
-    /* 슬라이드 메뉴 */
-    .menu {
-      position: fixed;
-      top: 0;
-      left: -100%;
-      width: 70%;
-      max-width: 260px;
-      height: 100%;
-      background: #111;
-      padding-top: 80px;
-      transition: left 0.3s ease;
-      z-index: 1000;
-    }
-
-    .menu a {
-      display: block;
-      padding: 16px 24px;
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-      border-bottom: 1px solid #222;
-    }
-
-    .menu a:hover {
-      background: #222;
-    }
-
-    .menu.open {
-      left: 0;
-    }
-
-    header {
-      padding: 100px 20px 40px;
-    }
-
-    header h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-      letter-spacing: 2px;
-    }
-
-    header p {
-      font-size: 18px;
-      opacity: 0.85;
-    }
-
-    footer {
-      padding: 20px;
-      font-size: 14px;
-      opacity: 0.6;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <!-- ☰ 버튼 -->
-  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+<header>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  <h1>GGIL GAMES</h1>
+</header>
 
-  <!-- 메뉴 -->
-  <nav class="menu" id="menu">
-    <a href="games.html">🎮 게임 보기</a>
-    <a href="notice.html">📢 공지</a>
-  </nav>
+<nav class="menu" id="menu">
+  <a href="index.html">🏠 홈</a>
+  <a href="games.html">🎮 게임</a>
+  <a href="notice.html">📢 공지</a>
+</nav>
 
-  <div class="wrapper">
-    <header>
-      <h1>🎮 GGIL GAMES</h1>
-      <p>Indie Game Developer</p>
-    </header>
+<main>
+  <h2>환영합니다 🎮</h2>
+  <p>GGIL GAMES 공식 사이트입니다.</p>
+</main>
 
-    <footer>
-      © 2026 GGIL GAMES
-    </footer>
-  </div>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById("menu").classList.toggle("open");
-    }
-  </script>
-
+<script src="script.js"></script>
 </body>
 </html>
