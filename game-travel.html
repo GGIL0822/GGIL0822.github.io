@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>내 게임 - GGIL GAMES</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  <h1>GGIL GAMES</h1>
+</header>
+
+<nav class="menu" id="menu">
+  <a href="index.html">🏠 홈</a>
+  <a href="games.html">🎮 게임</a>
+  <a href="notice.html">📢 공지</a>
+</nav>
+
+<main>
+  <h2>내 게임</h2>
+
+  <img src="images/game.png" style="width:100%;max-width:500px;border-radius:16px">
+
+  <p style="margin:16px 0">
+    이 게임은 GDevelop로 만든 액션 게임입니다.<br>
+    모바일과 PC에서 플레이할 수 있습니다.
+  </p>
+
+  <div class="download-box">
+    <a class="download-btn apk" href="files/game.apk">📱 APK 다운로드</a>
+    <a class="download-btn exe" href="files/game.exe">💻 EXE 다운로드</a>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
