@@ -103,3 +103,46 @@ main h2 {
   width: 100%;
   display: block;
 }
+
+/* ===== 플레이 버튼 ===== */
+.play-btn {
+  display: block;
+  margin: 10px 12px 14px;
+  padding: 10px;
+  background: #3b82f6;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.play-btn:hover {
+  background: #2563eb;
+}
+
+/* ===== 다운로드 ===== */
+.download-box {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.download-btn {
+  flex: 1;
+  padding: 14px;
+  text-align: center;
+  border-radius: 12px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+.download-btn.apk {
+  background: #16a34a;
+}
+
+.download-btn.exe {
+  background: #7c3aed;
+}
