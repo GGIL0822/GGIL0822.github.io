@@ -2,36 +2,31 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>게임 보기 | GGIL GAMES</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>게임 - GGIL GAMES</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- 상단바 -->
-<header class="topbar">
+<header>
   <button class="menu-btn" onclick="toggleMenu()">☰</button>
-  <h1>게임 보기</h1>
+  <h1>GGIL GAMES</h1>
 </header>
 
-<!-- 슬라이드 메뉴 -->
 <nav class="menu" id="menu">
   <a href="index.html">🏠 홈</a>
-  <a href="games.html">🎮 게임 보기</a>
-  <a href="#">📢 공지</a>
+  <a href="games.html">🎮 게임</a>
+  <a href="notice.html">📢 공지</a>
 </nav>
 
-<!-- 메인 -->
-<main class="container">
+<main>
+  <h2>게임 목록</h2>
 
-  <!-- 게임 카드 1 -->
-  <div class="game-card">
-    <img src="unwatermarked_Gemini_Generated_Image_henrphhenrphhenr (1).png"
-         alt="게임 썸네일">
-    <h2>내 게임</h2>
-    <a class="play-btn" href="#">▶ 게임 플레이</a>
+  <div class="games">
+    <div class="game-card">
+      <img src="images/game.png">
+      <h3>내 게임</h3>
+    </div>
   </div>
-
 </main>
 
 <script src="script.js"></script>
